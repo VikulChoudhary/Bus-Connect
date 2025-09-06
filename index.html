@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delhi BusConnect - Live Bus Tracking</title>
+    <title>BusConnect - Live Bus Tracking</title>
     
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Use the Inter font family */
         body {
             font-family: 'Inter', sans-serif;
         }
-        /* Custom scrollbar for a cleaner look */
         .page-content::-webkit-scrollbar {
             width: 4px;
         }
@@ -26,7 +21,7 @@
             background-color: #cbd5e1;
             border-radius: 20px;
         }
-        /* Simple transition for page visibility */
+      
         .page {
             transition: opacity 0.3s ease-in-out;
         }
@@ -34,31 +29,29 @@
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
 
-    <!-- Main container that simulates a mobile app screen -->
     <div class="w-full max-w-sm mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden h-[85vh] min-h-[700px] flex flex-col">
         
-        <!-- Header Section -->
+       
         <header class="p-5 flex justify-between items-center border-b border-gray-100 flex-shrink-0">
             <div>
                 <h1 class="text-2xl font-bold text-gray-800">Hello, Anika!</h1>
                 <p class="text-sm text-gray-500">Welcome to Delhi BusConnect</p>
             </div>
-            <!-- User Avatar with Active Status Indicator -->
+            
             <div class="relative">
                 <img src="https://imgs.search.brave.com/mY1lo0Rlt306XZO5zsyoKUX5UQpqibYtxUNBthORLbU/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzA1LzExLzU1Lzkw/LzM2MF9GXzUxMTU1/OTA4MF9YNElHa3pK/S3YzWnJIYnAyd0Iw/TW1KM0RDOW5vTlFJ/ci5qcGc" alt="User Avatar" class="w-10 h-10 rounded-full object-cover">
                 <span class="absolute bottom-0 right-0 block h-3 w-3 bg-green-500 rounded-full border-2 border-white"></span>
             </div>
         </header>
         
-        <!-- Main Content: This area will change based on navigation -->
         <main class="flex-grow relative overflow-y-auto">
             
             <!-- Page 1: Home -->
             <div id="page-home" class="page p-5">
-                <!-- Updated Search Section with From/To -->
+              
                 <div class="bg-white p-4 rounded-2xl shadow-lg border border-gray-100 mb-5">
                     <div class="space-y-3">
-                        <!-- From Destination -->
+                 
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <svg class="h-5 w-5 text-green-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -67,7 +60,7 @@
                             </div>
                             <input type="text" id="from-location" placeholder="Enter pickup location..." class="w-full bg-gray-100 border border-gray-200 rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
                         </div>
-                        <!-- To Destination -->
+             
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                  <svg class="h-5 w-5 text-red-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
@@ -80,7 +73,6 @@
                     <button id="find-bus-btn" class="w-full bg-blue-500 text-white font-bold py-3 px-4 rounded-xl mt-4 hover:bg-blue-600 transition shadow">Find Bus</button>
                 </div>
 
-                <!-- Running Status Button -->
                 <button id="running-status-btn" class="w-full bg-green-500 text-white font-bold py-3 px-4 rounded-xl mb-5 hover:bg-green-600 transition shadow flex items-center justify-center">
                     <svg class="w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M10 2a8 8 0 100 16 8 8 0 000-16zM5.75 8.75a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5z" clip-rule="evenodd" />
@@ -88,7 +80,6 @@
                     Check Running Status
                 </button>
 
-                <!-- Live Location Display -->
                 <div class="flex items-center justify-center text-sm text-gray-600 bg-gray-50 p-3 rounded-xl mb-5">
                     <svg class="w-5 h-5 text-blue-500 mr-2 animate-pulse" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M9.69 18.93l-3.13-6.26a1 1 0 01.31-1.31l6.26-3.13a1 1 0 011.31.31l3.13 6.26a1 1 0 01-.31 1.31l-6.26 3.13a1 1 0 01-1.31-.31zM10 14a4 4 0 100-8 4 4 0 000 8z" clip-rule="evenodd" />
@@ -111,7 +102,6 @@
                 </div>
             </div>
 
-            <!-- Page 2: Routes -->
             <div id="page-routes" class="page hidden p-5 page-content overflow-y-auto h-full">
                 <h2 class="text-xl font-bold text-gray-800 mb-4">Available Routes</h2>
                 <div class="space-y-3">
@@ -149,12 +139,10 @@
                 </div>
             </div>
 
-            <!-- Page 3: Map -->
             <div id="page-map" class="page hidden h-full">
                  <img src="https://imgs.search.brave.com/kjYhgOKuUxeKfqLwXHmnjPK2VCcT4RT3rcjVSK8R7Xc/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzU5LzYy/L2QzLzU5NjJkM2M1/MTI3NWRjZTFkMzYw/NThlZmY3YThkOWE0/LmpwZw" alt="Full Screen Map" class="w-full h-full object-cover">
             </div>
 
-            <!-- Page 4: Profile -->
             <div id="page-profile" class="page hidden p-5">
                 <h2 class="text-xl font-bold text-gray-800 mb-4">Profile</h2>
                 <div class="flex flex-col items-center">
@@ -222,8 +210,6 @@
             const favoriteButtons = document.querySelectorAll('.favorite-btn');
             const findBusBtn = document.getElementById('find-bus-btn');
             const runningStatusBtn = document.getElementById('running-status-btn');
-
-            // --- Navigation Logic ---
             navLinks.forEach(link => {
                 link.addEventListener('click', function (event) {
                     event.preventDefault();
@@ -313,5 +299,6 @@
     </script>
 </body>
 </html>
+
 
 
