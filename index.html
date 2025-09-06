@@ -240,7 +240,6 @@
                 });
             });
 
-            // --- Function to Show a Page ---
             function showPage(pageId) {
                 pages.forEach(page => {
                     page.classList.add('hidden');
@@ -250,12 +249,9 @@
                     targetPage.classList.remove('hidden');
                 }
             }
-
-            // --- Running Status Button Logic ---
             if (runningStatusBtn) {
                 runningStatusBtn.addEventListener('click', function() {
                     showPage('page-running-status');
-                    // Keep the 'Home' nav icon active
                     navLinks.forEach(navLink => {
                         navLink.classList.remove('text-blue-500');
                         navLink.classList.add('text-gray-400');
@@ -266,7 +262,6 @@
                 });
             }
 
-            // --- Favorites Button Logic ---
             favoriteButtons.forEach(button => {
                 button.addEventListener('click', function() {
                     favoriteButtons.forEach(btn => {
@@ -279,7 +274,6 @@
                 });
             });
 
-            // --- Find Bus Logic ---
             if (findBusBtn) {
                 findBusBtn.addEventListener('click', function() {
                     const fromLocation = document.getElementById('from-location').value;
@@ -294,7 +288,6 @@
                 });
             }
 
-            // --- Get User Location ---
             function displayUserLocation() {
                 const locationElement = document.getElementById('location-display');
                 if (navigator.geolocation) {
@@ -320,6 +313,5 @@
     </script>
 </body>
 </html>
-
 
 
